@@ -5,7 +5,7 @@ import Featured from './featured';
 import Subscriptions from './subscriptions';
 import Blocks from './blocks';
 import Polls from './polls';
-import Teams from './teams';
+// import Teams from './teams';
 
 const URL_HOME = 'http://localhost:3004/home';
 
@@ -17,8 +17,6 @@ class Home extends Component {
             home: '',
             error: ''
         }
-
-        this.getHomeData = this.getHomeData.bind(this);
     }
 
     getHomeData() {
@@ -29,7 +27,6 @@ class Home extends Component {
                 home: json
             })
         }).catch(error => {
-            // console.log (error.message + " ☹️ (Please check your Internet Connection)")
             this.setState({
                 error: error.message + " Data ☹️ (Please check your Internet Connection)"
             })

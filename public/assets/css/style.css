@@ -406,7 +406,11 @@ footer {
     flex-wrap: wrap;
 }
 
-.team_data_wrapper .squad .item {
+/*.item_player_wrapper img {
+    width: 70%;
+}*/
+
+.item_player_wrapper {
     position: relative;
     width: 25%;
     overflow: hidden;
@@ -414,13 +418,12 @@ footer {
     box-sizing: border-box;
 }
 
-.team_data_wrapper .squad .item h4 {
-    text-align: center;
+.item_player_wrapper h4 {
     color: #006bb6;
 }
 
-.team_data_wrapper .squad .item img {
-    width: 40%;
+.item_player_wrapper img {
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -430,7 +433,7 @@ footer {
     padding: 4px 0;
 }
 
-.team_data_wrapper .squad .item .node span {
+.item_player_wrapper .node span {
     font-weight: 600;
 }
 
