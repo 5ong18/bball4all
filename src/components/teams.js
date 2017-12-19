@@ -41,7 +41,7 @@ class Teams extends Component {
 
     // render the list of teams
     renderList = ({filtered}) => {
-        return (filtered).map((item) => {
+        return shuffleArray(filtered).map((item) => {
             return (
                 <Link to={`/team/${item.name}`} key={item.id} className="team_item">
                     <img alt={item.name} title={item.name} src={`assets/img/teams/${item.logo}`}/>
