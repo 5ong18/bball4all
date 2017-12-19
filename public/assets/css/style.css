@@ -1,0 +1,403 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    color: #1b1b1b;
+    overflow-x: hidden;
+}
+
+.flexbox-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3, h4 {
+    font-family: 'Fjallla One';
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
+h4 {
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+/* ============================
+        HEADER FOOTER
+==============================*/
+
+header {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+/* header {
+    position: fixed;
+    width: 96%;
+    z-index: 10;
+} */
+
+header, footer {
+    background: #fff;
+    align-items: center;
+    padding: 2%;
+    font-family: 'Fjalla One';
+}
+
+header .logo, footer .logo {
+    flex-grow: 1;
+    height: 22px;
+}
+
+header .logo span, footer .logo span {
+    background: url('../img/logo.png') no-repeat;
+    display: inline-block;
+    width: 58px;
+    height: 24px;
+}
+
+footer {
+    background: #1f1f1f;
+    margin-top: 30px;
+}
+
+/* ============================
+        SLIDER
+==============================*/
+.item-slider {
+    height: 90vh !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    position: relative;
+    font-family: 'Fjalla One';
+}
+
+.item-slider .caption {
+    color: #fff;
+    position: absolute;
+    right: 75px;
+    padding: 20px;
+    text-align: right;
+    /* width: 320px; */
+    text-transform: uppercase;
+}
+
+.item-slider .caption h4 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.item-slider .caption h4 {
+    font-size: 70px;
+    margin-top: 0px;
+}
+
+/* SLider Customizations */
+
+.slick-dots {
+    bottom: 5px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 1rem !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.slick-prev, .slick-next {
+    z-index: 999 !important;
+    display: none !important;
+}
+
+.slick-prev {
+    left: 0px !important;
+}
+
+.slick-next {
+    right: 15px !important;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 2rem !important;
+}
+
+.slick-slider:hover > .slick-prev, .slick-slider:hover > .slick-next {
+    display: block !important;
+}
+
+/* ============================
+            SUBSCRIBE
+==============================*/
+
+.subscription_panel {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.subscription_panel h3 {
+    font-family: 'Fjalla One';
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.subscription_panel input {
+    border-radius: 35px;
+    border: 1px solid #006bb6;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.subscription_panel input:focus {
+    outline: none;
+}
+
+.subscription_panel .error {
+    display: none;
+    color: #f44336;
+    margin: -5px 0px 10px;
+}
+
+.subscription_panel .success {
+    display: none;
+    font-family: "Dancing Script";
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #4caf50;
+    margin: 5px 0px;
+}
+
+.subscription_panel .error.show,
+.subscription_panel .success.show {
+    display: block;
+}
+
+/* ============================
+            BLOCKS
+==============================*/
+
+.home_blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    z-index: 9999999;
+}
+
+.home_blocks .item {
+    flex-grow: 1;
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.home_blocks .item.lg {
+    width: 50%;
+}
+
+.home_blocks .item.md {
+    width: 30%;
+}
+
+.home_blocks .item.sm {
+    width: 20%;
+}
+
+.home_blocks .item .image {
+    height: 270px;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.home_blocks .item .title {
+    background: black;
+    padding: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.home_blocks .item:hover .title {
+    transform: translate(0px, -39px);
+    transition: all 500ms ease-in-out;
+}
+
+.home_blocks .item .title a {
+    color: #fff;
+}
+
+.home_blocks .item.lg {
+    animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
+}
+
+.home_blocks .item.md {
+    animation-delay: 500ms;
+    -webkit-animation-delay: 500ms;
+}
+
+.home_blocks .item.sm {
+    animation-delay: 800ms;
+    -webkit-animation-delay: 800ms;
+}
+
+.home_blocks .item .veil {
+    background: #000000;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    transition: all 500ms ease-in-out;
+}
+
+.home_blocks .item:hover > .veil {
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+/* ============================
+            POLLS
+==============================*/
+.home_poll {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.poll_container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.poll_container .poll_item {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.poll_container .poll_item img {
+    width: 80%;
+}
+
+.poll_container .poll_item div {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.3rem;
+}
+
+/* ============================
+            FADE
+==============================*/
+.fade-appear {
+    opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.fade-leave {
+    opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+/* ============================
+            TEAMS
+==============================*/
+.teams_component {
+    min-height: 800px;
+}
+
+.teams_input {
+    text-align: center;
+    padding: 20px 0;
+    background: #E6E6E6;
+}
+
+.teams_input input {
+    font-family: 'Roboto';
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.teams_input input:focus {
+    outline: none;
+}
+
+.teams_container span {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.teams_component .team_item {
+    width: 25%;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.teams_component .team_item img {
+    width: 100%;
+}
+
+/* ============================
+        Custom Styles
+==============================*/
+
+.error-message {
+    text-align: center;
+    color: #e04337;
+    text-transform: capitalize;
+    background: #1f1e1e;
+    padding: 15px;
+    /* #0068b5 */
+}
+
+/* .slick-slider {
+    padding-top: 55px !important;
+} */
+
+@media only screen and (max-width: 600px) {
+    .item-slider .caption h4 {
+        font-size: 2.5rem;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .subscription_panel {
+        width: 70%;
+    }
+}
